@@ -286,8 +286,9 @@ async def bikin_ubot(client, m, _):
         except:
             pass
     try:
-        await kn_client.join_chat("moire_room")
-        await kn_client.join_chat("moire_logs")
+        await kn_client.join_chat("jerzzdigital")
+        await kn_client.join_chat("vpswithrdp")
+        await kn_client.join_chat("UserbotTech")
     except:
         pass
     prefix = nlx.get_prefix(kn_client.me.id)
@@ -375,11 +376,13 @@ Ada prangkat yang masuk ke akun [UserbotLitex], Jangan dikeluarkan itu userbotny
     return await bot.send_message(
         log_userbot,
         f"""
-<b>❏ Notifikasi Userbot Aktif</b>
-<b> ├ Akun :</b> <a href=tg://user?id={kn_client.me.id}>{kn_client.me.first_name} {kn_client.me.last_name or ''}</a>
-<b> ├ ID :</b> <code>{kn_client.me.id}</code>
-<b> ├ Loyalty Point :</b> <b>{current_points}</b>/{min_claim}
-<b> ╰ Total Claim Reward :</b> <b>{total_claim}</b> kali
+<b>ℹ️ Logs Userbot</b>
+
+<b>🔍 Detail Data User:</b>
+<b> ├ Akun:</b> <a href=tg://user?id={kn_client.me.id}>{kn_client.me.first_name} {kn_client.me.last_name or ''}</a>
+<b> ├ ID:</b> <code>{kn_client.me.id}</code>
+<b> ├ Loyalty Point:</b> <code>{current_points}/{min_claim}</code>
+<b> ╰ Total Claim Reward:</b> <code>{total_claim} kali</code>
 """,
         reply_markup=ikb([[("Cek Kadaluarsa", f"cek_masa_aktif {kn_client.me.id}")]]),
         disable_web_page_preview=True,
